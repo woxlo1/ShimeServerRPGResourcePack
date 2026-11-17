@@ -8,7 +8,7 @@
                 "threshold": 1.0,
                 "model": {
                     "type": "minecraft:model",
-                    "model": "minecraft:item/enderchest_stone"
+                    "model": "minecraft:item/material/enderchest_stone"
                 }
             }
         ],

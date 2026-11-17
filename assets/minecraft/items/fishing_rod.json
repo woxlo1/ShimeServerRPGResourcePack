@@ -11,11 +11,11 @@
                     "property": "minecraft:fishing_rod/cast",
                     "on_true": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/normal_fishing_rod_cast"
+                        "model": "minecraft:item/fishing_rod/normal_fishing_rod_cast"
                     },
                     "on_false": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/normal_fishing_rod"
+                        "model": "minecraft:item/fishing_rod/normal_fishing_rod"
                     }
                 }
             },
@@ -26,11 +26,11 @@
                     "property": "minecraft:fishing_rod/cast",
                     "on_true": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/battered_fishing_rod_cast"
+                        "model": "minecraft:item/fishing_rod/battered_fishing_rod_cast"
                     },
                     "on_false": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/battered_fishing_rod"
+                        "model": "minecraft:item/fishing_rod/battered_fishing_rod"
                     }
                 }
             },
@@ -41,11 +41,11 @@
                     "property": "minecraft:fishing_rod/cast",
                     "on_true": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/warped_mossy_fishing_rod_cast"
+                        "model": "minecraft:item/fishing_rod/warped_mossy_fishing_rod_cast"
                     },
                     "on_false": {
                         "type": "minecraft:model",
-                        "model": "minecraft:item/warped_mossy_fishing_rod"
+                        "model": "minecraft:item/fishing_rod/warped_mossy_fishing_rod"
                     }
                 }
             }

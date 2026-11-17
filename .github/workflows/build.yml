@@ -2,7 +2,9 @@ name: Build Resource Pack
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -10,15 +12,29 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Create ZIP archive
-        run: zip -r ShimesabaRPGResourcePack.zip assets pack.mcmeta pack.png
+        run: |
+          zip -r ShimesabaRPGResourcePack.zip assets pack.mcmeta pack.png
 
+      # latestタグを今回のコミットへ移動
+      - name: Update latest tag
+        run: |
+          git tag -f latest "$GITHUB_SHA"
+          git push origin refs/tags/latest --force
+
+      # ReleaseのZIPを更新
       - name: Upload to Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: latest
+          name: Latest
+          target_commitish: ${{ github.sha }}
           files: ShimesabaRPGResourcePack.zip
+          overwrite_files: true
+          fail_on_unmatched_files: true
+          make_latest: true
