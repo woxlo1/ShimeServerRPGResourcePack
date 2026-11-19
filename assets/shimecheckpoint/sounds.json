@@ -1,0 +1,11 @@
+{
+  "checkpoint.unlock": {
+    "sounds": [
+      {
+        "name": "shimecheckpoint:unlock",
+        "stream": false
+      }
+    ],
+    "subtitle": "チェックポイント解放"
+  }
+}
